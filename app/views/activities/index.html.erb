@@ -1,0 +1,11 @@
+<h2>This is the INDEX page for activities. Get the WHOLE list. All of it.</h2>
+
+<% @activities.each do |activity| %>
+<div class="activity">
+	<p class="name"><%= activity.activity_name %></p>
+	<p class="time_available"><%= activity.minutes_available %></p>
+</div>
+<% end %>
+
+<%= link_to 'New Activity', "/activities/new" %>
+<h2>End list.</h2>

@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   root 'pages#welcome'
+  get '/activities' => 'activities#index'
+  get '/activities/new' => 'activities#new'
+  post 'activities' => 'activities#create'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
