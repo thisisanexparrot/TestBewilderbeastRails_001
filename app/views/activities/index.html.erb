@@ -2,8 +2,10 @@
 
 <% @activities.each do |activity| %>
 <div class="activity">
-	<p class="name"><%= activity.activity_name %></p>
-	<p class="time_available"><%= activity.minutes_available %></p>
+	<%= link_to(activity) do %>
+		<p class="name"><%= activity.activity_name %></p>
+		<p class="time_available"><%= activity.minutes_available %></p>
+	<% end %>
 </div>
 <% end %>
 

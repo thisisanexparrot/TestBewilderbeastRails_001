@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   get '/activities' => 'activities#index'
   get '/activities/new' => 'activities#new'
   post 'activities' => 'activities#create'
+  get '/activities/:id/edit' => 'activities#edit', as: :edit_activity
+  patch '/activities/:id' => 'activities#update'
+  resources :activities
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

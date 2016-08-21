@@ -1,0 +1,8 @@
+<%= form_for(@activity) do |a| %>
+	<div class="field">
+		<%= a.text_area :activity_name %>
+	</div>
+	<div class="actions">
+		<%= a.submit "Submit edit" %>
+	</div>
+<% end %>
